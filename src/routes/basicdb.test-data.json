@@ -1,0 +1,46 @@
+{
+  "headers": ["id", "name", "email", "isAdmin"],
+  "meta": {
+    "sheets": [
+      { "title": "Sheet1" },
+      { "title": "basicdb" },
+      { "title": "listsdb" },
+      { "title": "writedb" }
+    ],
+    "spreadsheetId": "1tPc2W9ZXRY7dy4q5UQYUv4TZ0GGSkdxs29FMlJGZy10",
+    "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1tPc2W9ZXRY7dy4q5UQYUv4TZ0GGSkdxs29FMlJGZy10/edit",
+    "tab": "basicdb",
+    "title": "[DO NOT DELETE] Development Test Sheet",
+    "headers": ["id", "name", "email", "isAdmin"]
+  },
+  "read": [
+    {
+      "_row": 2,
+      "email": "user1@example.com",
+      "id": 1,
+      "isAdmin": true,
+      "name": "user1"
+    },
+    {
+      "_row": 3,
+      "email": "user2@example.com",
+      "id": 2,
+      "isAdmin": false,
+      "name": "user2"
+    },
+    {
+      "_row": 4,
+      "email": "user3@example.com",
+      "id": 3,
+      "isAdmin": false,
+      "name": "user3"
+    },
+    {
+      "_row": 5,
+      "email": "user4@example.com",
+      "id": 4,
+      "isAdmin": false,
+      "name": "user4"
+    }
+  ]
+}

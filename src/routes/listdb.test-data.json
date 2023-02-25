@@ -1,0 +1,54 @@
+{
+  "titles": ["Colors", "Industries", "Foods"],
+  "meta": {
+    "sheets": [
+      { "title": "Sheet1" },
+      { "title": "basicdb" },
+      { "title": "listsdb" },
+      { "title": "writedb" }
+    ],
+    "spreadsheetId": "1tPc2W9ZXRY7dy4q5UQYUv4TZ0GGSkdxs29FMlJGZy10",
+    "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1tPc2W9ZXRY7dy4q5UQYUv4TZ0GGSkdxs29FMlJGZy10/edit",
+    "tab": "listsdb",
+    "title": "[DO NOT DELETE] Development Test Sheet",
+    "titles": ["Colors", "Industries", "Foods"]
+  },
+  "read": [
+    {
+      "items": [
+        "Royal blue & peach",
+        "Blue & pink",
+        "Charcoal & yellow",
+        "Red & yellow",
+        "Lime green & electric blue",
+        "Lavender & teal"
+      ],
+      "title": "Colors"
+    },
+    {
+      "items": [
+        "Airport Operation",
+        "Hotels & Resorts",
+        "Travel Agency Services",
+        "Tourism",
+        "Airlines",
+        "Reinsurance Carriers",
+        "Commercial Aircraft Manufacturing",
+        "Architectural Services"
+      ],
+      "title": "Industries"
+    },
+    {
+      "items": [
+        "Ice Cream.",
+        "Chicken Tenders.",
+        "Soft Drinks/Soda.",
+        "Pizza.",
+        "Oreo Cookies.",
+        "French Fries.",
+        "Hot Dogs."
+      ],
+      "title": "Foods"
+    }
+  ]
+}
