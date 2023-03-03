@@ -1,6 +1,6 @@
 {
   "name": "@de44/sheets-stack-server",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Express JS routes to expose simplify interactions with Google Sheets.",
   "main": "src/index.js",
   "homepage": "https://documenter.getpostman.com/view/9853523/2s93CPprhk",
@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "nodemon src/main.js",
+    "release": "npm publish",
     "test": "jest --watchAll"
   },
   "keywords": [],
