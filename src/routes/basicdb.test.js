@@ -7,6 +7,11 @@ const ID_QUERY_PARAMS = {
   sheetName: "basicdb",
 };
 
+const WRITE_QUERY_PARAMS = {
+  spreadsheetId: "1tPc2W9ZXRY7dy4q5UQYUv4TZ0GGSkdxs29FMlJGZy10",
+  sheetName: "writedb",
+};
+
 const paginationQueryParams = (limit, offset) => ({
   ...ID_QUERY_PARAMS,
   limit,
@@ -90,6 +95,53 @@ describe("Basic DB /db/v1", () => {
       .expect(200)
       .then((res) => {
         expect(res.body).toEqual(expected);
+      });
+  });
+  test("POST /db/v1/ - Insert Record", () => {
+    const id = Math.trunc(Math.random() * 1000);
+    const expected = {
+      email: `unit-test-user${id}@example.com`,
+      id,
+      isAdmin: !!(id & 1),
+      name: `unit-test-user${id}`,
+    };
+    return request(app)
+      .post("/db/v1/")
+      .send(expected)
+      .query(WRITE_QUERY_PARAMS)
+      .expect(200)
+      .then((res) => {
+        const actual = {
+          ...res.body,
+          _row: undefined,
+        };
+        expect(actual).toEqual(expected);
+      });
+  });
+  test("PUT /db/v1/ - Update Record", async () => {
+    const _row = 4;
+    const id = Math.trunc(Math.random() * 1000);
+    const expected = {
+      _row,
+      email: `unit-test-user${id}@example.com`,
+      id,
+      isAdmin: !!(id & 1),
+      name: `unit-test-user${id}`,
+    };
+
+    const updateResult = await request(app)
+      .put(`/db/v1/${_row}`)
+      .send(expected)
+      .query(WRITE_QUERY_PARAMS)
+      .expect(200);
+    expect(updateResult.body).toEqual(true);
+    return request(app)
+      .get(`/db/v1/read/${_row}`)
+      .query(WRITE_QUERY_PARAMS)
+      .expect(200)
+      .then((res) => {
+        const actual = res.body;
+        expect(actual).toEqual(expected);
       });
   });
 });

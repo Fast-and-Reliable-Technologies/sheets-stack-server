@@ -17,8 +17,9 @@ describe("/services", () => {
       .then((res) => {
         expect(res.body).toEqual({
           name: "@de44/sheets-stack-server",
-          version: "1.0.0",
-          description: "",
+          version: "1.0.2",
+          description:
+            "Express JS routes to expose simplify interactions with Google Sheets.",
         });
       });
   });

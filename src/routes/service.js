@@ -14,4 +14,8 @@ router.get("/info", (req, res) => {
   res.json(INFO);
 });
 
+router.get("/meta", (req, res) => {
+  res.json(INFO);
+});
+
 module.exports = router;
